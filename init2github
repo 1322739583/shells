@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+git commit -m "第一次提交"
+git remote add origin $1
+git pull --allow-unrelated-histories origin master
+git push --set-upstream origin master
+git push
