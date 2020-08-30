@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+echo "开始新的一天"
+cd ~/org/todo;
+
+year=`date "+%Y"`
+month=`date "+%m"`
+todoFileName=`date "+%Y-%m-%d-todo.org"`
+
+mkdir $year&>/dev/null
+cd $year
+mkdir $month&>/dev/null
+cd $month
+touch $todoFileName
+cd ~/org
+
+emacs ~/org/$year/$month/$todoFileName
+
